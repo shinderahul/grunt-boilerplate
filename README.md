@@ -14,3 +14,12 @@
 * npm install
 * npm install grunt
 * Run those tasks in the command line while you work
+
+## Dev Dependency
+
+* "grunt": "^1.0.2", // Core Grunt module
+* "grunt-contrib-concat": "^1.0.1", // Javascript concatenation
+* "grunt-contrib-cssmin": "^2.2.1", // CSS minification
+* "grunt-contrib-sass": "^1.0.0", // Sass processing
+* "grunt-contrib-uglify": "^3.3.0", // Javascript minification
+* "grunt-contrib-watch": "^1.0.0" // Watch for change in file and reload
