@@ -1,0 +1,21 @@
+{
+  "name": "grunt-boilerplate",
+  "version": "1.0.0",
+  "description":
+    "Show web accessibility standards such as A, AA and AAA using grunt setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shinderahul/grunt-boilerplate.git"
+  },
+  "keywords": ["grunt-setup", "web-accessibility", "grunt-boilerplate"],
+  "author": "Rahul Shinde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shinderahul/grunt-boilerplate/issues"
+  },
+  "homepage": "https://github.com/shinderahul/grunt-boilerplate#readme"
+}
