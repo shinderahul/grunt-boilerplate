@@ -2,11 +2,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
     concat: {
       js: {
-        src: ['src/assets/js/*.js'],
+        src: ['src/assets/js/*.js', '!src/assets/js/*.min.js'],
         dest: 'src/assets/js/script.min.js'
       },
       css: {
-        src: ['src/assets/css/*.css'],
+        src: ['src/assets/css/*.css', '!src/assets/css/*.min.css'],
         dest: 'src/assets/css/style.min.css'
       }
     },
@@ -42,6 +42,11 @@ module.exports = function(grunt) {
           }
         ]
       }
+    },
+
+    clean: {
+      js: ['src/assets/js/script.min.js'],
+      css: ['src/assets/css/style.min.css']
     }
   });
 
