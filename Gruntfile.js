@@ -31,12 +31,24 @@ module.exports = function(grunt) {
           }
         ]
       }
+    },
+
+    cssmin: {
+      build: {
+        files: [
+          {
+            src: 'build/assets/css/style.min.css',
+            dest: 'build/assets/css/style.min.css'
+          }
+        ]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['concat', 'sass', 'uglify']);
+  grunt.registerTask('default', ['concat', 'sass', 'uglify', 'cssmin']);
 };
