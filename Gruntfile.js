@@ -3,11 +3,11 @@ module.exports = function(grunt) {
     concat: {
       js: {
         src: ['src/assets/js/vendor/*.js', 'src/assets/js/*.js'],
-        dest: 'build/assets/js/script.js'
+        dest: 'build/assets/js/script.min.js'
       },
       css: {
         src: ['src/assets/css/vendor/*.css', 'src/assets/css/*.css'],
-        dest: 'build/assets/css/style.css'
+        dest: 'build/assets/css/style.min.css'
       }
     },
 
@@ -20,11 +20,23 @@ module.exports = function(grunt) {
           }
         ]
       }
+    },
+
+    uglify: {
+      build: {
+        files: [
+          {
+            src: 'build/assets/js/script.min.js',
+            dest: 'build/assets/js/script.min.js'
+          }
+        ]
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['concat', 'sass']);
+  grunt.registerTask('default', ['concat', 'sass', 'uglify']);
 };
