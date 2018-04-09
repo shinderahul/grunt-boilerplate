@@ -55,6 +55,27 @@ module.exports = function(grunt) {
           }
         ]
       }
+    },
+
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/',
+
+            src: ['*.html'],
+            dest: 'build/',
+            ext: '.html'
+          },
+          {
+            expand: true,
+            cwd: 'src/assets/vendor/',
+            src: '**',
+            dest: 'build/assets/vendor/'
+          }
+        ]
+      }
     }
   });
 
@@ -63,7 +84,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', ['concat', 'sass']);
-  grunt.registerTask('build', ['uglify', 'cssmin', 'imagemin']);
+  grunt.registerTask('build', ['uglify', 'cssmin', 'imagemin', 'copy']);
 };
