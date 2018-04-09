@@ -1,5 +1,12 @@
 module.exports = function(grunt) {
   grunt.initConfig({
+    watch: {
+      scss: {
+        files: ['src/assets/scss/**/*.scss'],
+        tasks: ['sass', 'concat']
+      }
+    },
+
     imagemin: {
       dynamic: {
         files: [
@@ -79,6 +86,7 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -86,6 +94,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('default', ['concat', 'sass']);
+  grunt.registerTask('default', ['watch']);
   grunt.registerTask('build', ['uglify', 'cssmin', 'imagemin', 'copy']);
 };
