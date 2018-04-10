@@ -80,6 +80,12 @@ module.exports = function(grunt) {
             cwd: 'src/assets/vendor/',
             src: '**',
             dest: 'build/assets/vendor/'
+          },
+          {
+            expand: true,
+            cwd: 'src/assets/fonts/',
+            src: '**',
+            dest: 'build/assets/fonts/'
           }
         ]
       }
