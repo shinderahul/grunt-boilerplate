@@ -27,6 +27,7 @@
 * "grunt-contrib-copy": "^1.0.0", // Copy files or folder from src to build folder
 * "grunt-contrib-cssmin": "^2.2.1", // CSS minification
 * "grunt-contrib-imagemin": "^2.0.1", // Images optimization
+* "grunt-contrib-jshint": "^1.1.0", // JS Lint
 * "grunt-contrib-uglify": "^3.3.0", // Javascript minification
 * "grunt-contrib-watch": "^1.0.0", // Watch for change in file and reload
 * "grunt-sass": "^2.1.0", // Sass processing
