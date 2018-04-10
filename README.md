@@ -13,13 +13,28 @@
 * Install Node.js and Grunt
 * npm install
 * npm install grunt
-* Run those tasks in the command line while you work
+
+## Run the Project
+
+* Run "live-server" to start local server. Find below steps to install live Server
+* Run "grunt" to run the Project
+* Run "grunt-build" to get build folder
 
 ## Dev Dependency
 
 * "grunt": "^1.0.2", // Core Grunt module
 * "grunt-contrib-concat": "^1.0.1", // Javascript concatenation
+* "grunt-contrib-copy": "^1.0.0", // Copy files or folder from src to build folder
 * "grunt-contrib-cssmin": "^2.2.1", // CSS minification
-* "grunt-contrib-sass": "^1.0.0", // Sass processing
+* "grunt-contrib-imagemin": "^2.0.1", // Images optimization
 * "grunt-contrib-uglify": "^3.3.0", // Javascript minification
-* "grunt-contrib-watch": "^1.0.0" // Watch for change in file and reload
+* "grunt-contrib-watch": "^1.0.0", // Watch for change in file and reload
+* "grunt-sass": "^2.1.0", // Sass processing
+* "node-sass": "^4.8.3" // Sass processing
+
+## Live Server
+
+I have created live server using following commands.
+
+* Install NPM Module : npm install -g live-server
+* Run Live Server : live-server
