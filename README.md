@@ -34,7 +34,7 @@
 
 ## Live Server
 
-I have created live server using following commands.
+To run live server using following commands.
 
 * Install NPM Module : npm install -g live-server
 * Run Live Server : live-server
