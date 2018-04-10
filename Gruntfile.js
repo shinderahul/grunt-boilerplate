@@ -4,6 +4,10 @@ module.exports = function(grunt) {
       scss: {
         files: ['src/assets/scss/**/*.scss'],
         tasks: ['sass', 'concat']
+      },
+      scripts: {
+        files: ['src/assets/js/*.js', '!src/assets/js/script.min.js'],
+        tasks: ['jshint']
       }
     },
 
@@ -53,6 +57,10 @@ module.exports = function(grunt) {
       }
     },
 
+    jshint: {
+      src: ['src/assets/js/*.js', '!src/assets/js/script.min.js']
+    },
+
     cssmin: {
       build: {
         files: [
@@ -99,7 +107,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['watch', 'jshint']);
   grunt.registerTask('build', ['uglify', 'cssmin', 'imagemin', 'copy']);
 };
