@@ -3,3 +3,6 @@
 # dependencies
 /node_modules
 /build
+/src/assets/css/style.css
+/src/assets/js/*
+!/src/assets/js/script.min.js
