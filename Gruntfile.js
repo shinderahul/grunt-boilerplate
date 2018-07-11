@@ -6,8 +6,8 @@ module.exports = function(grunt) {
         tasks: ['sass', 'concat']
       },
       scripts: {
-        files: ['src/assets/js/*.js', '!src/assets/js/script.min.js'],
-        tasks: ['jshint']
+        files: ['src/assets/js/*.js'],
+        tasks: ['jshint', 'concat']
       }
     },
 
